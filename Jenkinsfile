@@ -46,7 +46,7 @@ node{
     
     stage('Pushing it ot the DockerHub'){
         echo 'Pushing the docker image to DockerHub'
-        withCredentials([string(credentialsId: 'dockerhug-pwd', variable: 'Vibin3008')]) {
+        withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'Vibin3008')]) {
         sh "${dockerCMD} login -u vibin3021 -p ${Vibin3008}"
         sh "${dockerCMD} push vibin3021/insure-me:${tagName}"
             
